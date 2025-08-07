@@ -12,7 +12,7 @@
 
 🔹 Download:
 - 📼 Video (muted stream)
-- 🔊 Audio (separate .m4a or .mp3)
+- 🔊 Audio (separate .m4a)
 
 🛠️ Coming soon: A tool to merge video and audio using `ffmpeg`.
 
