@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Google Drive Media Catcher",
+  "version": "1.4",
+  "description": "bypass Google Drive.",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "tabs",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

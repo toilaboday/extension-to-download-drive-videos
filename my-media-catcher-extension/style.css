@@ -1,0 +1,186 @@
+/* General Styling & Fonts */
+:root {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --primary-color: #4f46e5;
+  --primary-color-hover: #4338ca;
+  --red-color: #ef4444;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-width: 650px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Main Content & Buttons */
+main {
+  padding: 24px;
+}
+
+.media-container {
+  min-height: 200px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.media-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  margin: 0 -16px;
+}
+
+.media-block:last-child {
+  border-bottom: none;
+}
+
+.media-block-info {
+  flex-grow: 1;
+  margin-right: 16px; 
+}
+
+/* ✨ Kiểu mới cho textarea ✨ */
+.title-input {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5; /* Cải thiện khoảng cách dòng */
+  margin: 0 0 4px 0;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px; /* Bo tròn hơn một chút */
+  width: 98%; 
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+  
+  /* Thuộc tính cho textarea */
+  resize: none; /* Tắt tính năng resize thủ công vì đã có auto-resize */
+  overflow: hidden; /* Ẩn thanh cuộn, JS sẽ xử lý chiều cao */
+  min-height: 38px; /* Chiều cao tối thiểu */
+}
+
+.title-input:hover {
+  border-color: var(--border-color);
+}
+
+.title-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--bg-primary);
+}
+
+.media-block-info p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+  word-break: break-all;
+}
+
+.log {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 50px 0;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+  filter: brightness(0.9);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-primary);
+}
+
+.btn-danger {
+  background-color: var(--red-color);
+  color: white;
+  border-color: var(--red-color);
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
